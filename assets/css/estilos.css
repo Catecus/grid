@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 0.5fr 4fr 0.3fr;
+  grid-template-areas:
+    "nav nav"
+    "menu card"
+    "footer footer";
+}
+.nav {
+  grid-area: nav;
+  background-color: #dd0c0c;
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  background-color: #ffffff;
+}
+
+.menu ul {
+  list-style: none;
+  margin-top: 3rem;
+}
+
+.amenu {
+  color: #0a1533;
+  text-decoration: solid;
+}
+
+.amenu:hover {
+  text-decoration: dotted;
+  font-size: 2rem;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(200px, 300px);
+  gap: 1rem;
+  grid-area: card;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background-color: #e7e7e7;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.producto img {
+  width: 100%;
+  max-width: 10rem;
+  height: 100%;
+  max-height: 10rem;
+}
+
+.btn {
+  width: 100%;
+  background-color: #f18e0c;
+  color: #fff;
+  border: 0px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.btn:hover {
+  text-decoration: dotted;
+  font-size: 325%;
+}
+
+.footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #ffee00;
+  border: solid 1px;
+}
